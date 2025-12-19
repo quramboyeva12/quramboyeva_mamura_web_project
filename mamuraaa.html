@@ -1,0 +1,269 @@
+Quramboyeva, [19.12.2025 10:15]
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+    <meta charset="UTF-8">
+    <title>🌸 Gul Do‘koni</title>
+
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Poppins', sans-serif;
+            background: linear-gradient(135deg, #fde0dc, #fce4ec);
+        }
+
+        header {
+            text-align: center;
+            padding: 30px;
+            background: #d81b60;
+            color: white;
+            border-bottom-left-radius: 25px;
+            border-bottom-right-radius: 25px;
+        }
+
+        h1 {
+            margin: 0;
+            font-size: 36px;
+        }
+
+        header p {
+            margin-top: 8px;
+            font-size: 17px;
+        }
+
+        .items {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 25px;
+            padding: 40px;
+        }
+
+        .item {
+            background: white;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 6px 18px rgba(0,0,0,0.2);
+            transition: 0.3s;
+        }
+
+        .item:hover {
+            transform: translateY(-8px);
+        }
+
+        .item img {
+            width: 100%;
+            height: 220px;
+            object-fit: cover;
+        }
+
+        .content {
+            padding: 15px;
+        }
+
+        .title {
+            font-size: 22px;
+            color: #880e4f;
+            margin: 0;
+        }
+
+        .type {
+            font-weight: bold;
+            color: #c2185b;
+            margin-top: 5px;
+        }
+
+        .desc {
+            margin-top: 10px;
+            color: #424242;
+        }
+
+        .order {
+            max-width: 650px;
+            background: white;
+            margin: 40px auto;
+            padding: 30px;
+            border-radius: 20px;
+            box-shadow: 0 6px 18px rgba(0,0,0,0.2);
+        }
+
+        .order h2 {
+            text-align: center;
+            color: #d81b60;
+        }
+
+        label {
+            font-weight: bold;
+            display: block;
+            margin-top: 15px;
+        }
+
+        input, select {
+            width: 100%;
+            padding: 12px;
+            margin-top: 6px;
+            border-radius: 10px;
+            border: 1px solid #ccc;
+            font-size: 15px;
+        }
+
+        button {
+            width: 100%;
+            margin-top: 25px;
+            padding: 14px;
+            background: #d81b60;
+            color: white;
+            font-size: 16px;
+            border: none;
+            border-radius: 12px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background: #ad1457;
+        }
+
+        .flower-box {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 12px;
+            margin-top: 10px;
+        }
+
+        .flower-card {
+            background: #fff0f6;
+            border: 2px solid #f8bbd0;
+            border-radius: 12px;
+            padding: 12px;
+            text-align: center;
+            cursor: pointer;
+            transition: 0.3s;
+            font-weight: bold;
+            color: #880e4f;
+        }
+
+        .flower-card input {
+            display: none;
+        }
+
+        .flower-card:hover {
+            background: #fce4ec;
+        }
+
+        .flower-card input:checked + span {
+            background: #d81b60;
+            color: white;
+            padding: 6px 10px;
+            border-radius: 8px;
+            display: inline-block;
+        }
+
+        @media (max-width: 900px) {
+            .items {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            .flower-box {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 600px) {
+            .items {
+                grid-template-columns: 1fr;
+                padding: 20px;
+            }
+            .flower-box {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <h1>🌸 Gul Do‘koni</h1>
+    <p>Eng yangi va chiroyli gullar</p>
+</header>
+
+<section class="items">
+<div class="item">
+        <img src="rasim 4.jpg" alt="Atirgul">
+        <div class="content">
+            <h3 class="title">Atirgullar</h3>
+            <p class="type">Romantik</p>
+            <p class="desc">Qizil va oq atirgullar.</p>
+        </div>
+    </div>
+
+    <div class="item">
+        <img src="rasim 2.jpg" alt="Lola">
+        <div class="content">
+            <h3 class="title">Lolalar</h3>
+            <p class="type">Bahor gullari</p>
+            <p class="desc">Rang-barang lolalar.</p>
+        </div>
+    </div>
+
+    <div class="item">
+        <img src="rasim 3.jpg" alt="Buket">
+        <div class="content">
+            <h3 class="title">Buketlar</h3>
+            <p class="type">Maxsus buyurtma</p>
+            <p class="desc">Bayramlar uchun buketlar.</p>
+        </div>
+    </div>
+
+</section>
+
+<section class="order">
+    <h2>🛒 Buyurtma berish</h2>
+
+    <form onsubmit="sendOrder(event)">
+        <label>Ism</label>
+        <input type="text" required placeholder="Ismingiz">
+
+        <label>Telefon</label>
+        <input type="tel" required placeholder="+998 90 123 45 67">
+
+        <label>Gulni tanlang</label>
+        <div class="flower-box">
+            <label class="flower-card">
+                <input type="checkbox">
+                <span>🌹 Atirgul</span>
+            </label>
+            <label class="flower-card">
+                <input type="checkbox">
+                <span>🌷 Lola</span>
+            </label>
+            <label class="flower-card">
+                <input type="checkbox">
+                <span>💐 Buket</span>
+            </label>
+        </div>
+
+        <label>Yetkazib berish vaqti</label>
+<select required>
+    <option value="">Vaqtni tanlang</option>
+    <option>10:00 – 12:00</option>
+    <option>12:00 – 14:00</option>
+    <option>14:00 – 16:00</option>
+    <option>16:00 – 18:00</option>
+    <option>18:00 – 20:00</option>
+    <option>20:00 – 22:00</option>
+    <option>22:00 – 00:00</option>
+</select>
+
+
+        <button type="submit">Buyurtma berish</button>
+    </form>
+</section>
+
+<script>
+    function sendOrder(e) {
+        e.preventDefault();
+        alert("🌸 Buyurtmangiz qabul qilindi! Tez orada bog‘lanamiz.");
+    }
+</script>
+
+</body>
+</html>
