@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="uz">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🌸 Gulzor — Gullar Do‘koni</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="script.js" defer></script>
+</head>
+
+<body>
+
+    <header>
+        <h1>🌸 Gulzor Gullar Do‘koni</h1>
+        <p>Har bir lahza uchun go‘zal gullar</p>
+    </header>
+
+    <nav class="menu">
+        <a href="#" class="openPage" data-page="home">Bosh sahifa</a>
+        <a href="#" class="openPage" data-page="about">Biz haqimizda</a>
+        <a href="#" class="openPage" data-page="services">Xizmatlar</a>
+        <a href="#" class="openPage" data-page="flowers">Gullar</a>
+        <a href="#" class="openPage" data-page="advantages">Afzalliklar</a>
+        <a href="#" class="openPage" data-page="order">Buyurtma</a>
+        <a href="#" class="openPage" data-page="contact">Aloqa</a>
+    </nav>
+
+
+    <section id="about">
+        <h2>Biz haqimizda</h2>
+        <p><strong>Gulzor</strong> 🌸 Gulzor Gullar Do‘koni
+
+            Gulzor — har bir lahza uchun yangi va nafis gullarni taqdim etuvchi ishonchli gul do‘koni.
+            Bizda atirgul, lola, orxideya va boshqa turdagi sifatli gullar mavjud.
+            Bayramlar, to‘ylar va maxsus kunlar uchun chiroyli va zamonaviy buketlar tayyorlanadi.
+            Tez va ishonchli yetkazib berish, chiroyli o‘ram hamda qulay to‘lov usullari bilan xizmat qilamiz.
+            Maqsadimiz — har bir mijozga quvonch va go‘zallik ulashish.</p>
+    </section>
+
+    <section id="services">
+        <h2>Xizmatlar</h2>
+        <ul>
+            <li>Bayram buketlari</li>
+            <li>To‘y bezakl ari</li>
+            <li>Yetkazib berish</li>
+            <li>Maxsus dizayn</li>
+        </ul>
+    </section>
+
+    <section id="flowers">
+        <h2>Gullar narxlari</h2>
+        <table>
+            <tr>
+                <th>№</th>
+                <th>Gul</th>
+                <th>Narx</th>
+            </tr>
+            <tr>
+                <td>1</td>
+                <td>Atirgul</td>
+                <td>25 000 so‘m</td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>Lola</td>
+                <td>15 000 so‘m</td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td>Orxideya</td>
+                <td>60 000 so‘m</td>
+            </tr>
+        </table>
+    </section>
+
+    <section id="advantages" class="grid-section">
+        <h2>Afzalliklar</h2>
+        <div class="grid">
+            <div class="card">🌹 Yangi gullar</div>
+            <div class="card">🚚 Tez yetkazish</div>
+            <div class="card">🎁 Chiroyli o‘ram</div>
+            <div class="card">💳 Qulay to‘lov</div>
+        </div>
+    </section>
+
+    <section id="order" class="form-section">
+        <h2>Buyurtma berish</h2>
+        <form id="orderForm">
+            <input type="text" id="customerName" placeholder="Ismingiz" required>
+            <input type="tel" id="phone" placeholder="Telefon raqam" required>
+            <select id="flowerSelect">
+                <option>Atirgul</option>
+                <option>Lola</option>
+                <option>Orxideya</option>
+            </select>
+            <button type="submit">Yuborish</button>
+        </form>
+        <p id="orderResult"></p>
+    </section>
+
+    <section class="events-section">
+        <h3>Gul tanlash (change)</h3>
+        <select id="priceSelect">
+            <option value="">Tanlang</option>
+            <option value="25000">Atirgul</option>
+            <option value="15000">Lola</option>
+            <option value="60000">Orxideya</option>
+        </select>
+        <p id="priceResult"></p>
+
+        <h3>Buyurtmachilar (submit)</h3>
+        <form id="nameForm">
+            <input type="text" id="nameInput" placeholder="Ism" required>
+            <button type="submit">Qo‘shish</button>
+        </form>
+        <p id="nameResult"></p>
+
+        <h3>Ism bo‘yicha hisoblash</h3>
+        <input type="text" id="searchName" placeholder="Ism">
+        <button id="countBtn">Hisoblash</button>
+        <p id="countResult"></p>
+    </section>
+
+    <section class="responsive-cards">
+        <h2>Gul turlari</h2>
+        <div class="cards">
+            <div class="card open-modal" data-text="Qizil atirgullar">
+                <img src="rasim 1.jpg">
+                <h3>Atirgul</h3>
+            </div>
+            <div class="card open-modal" data-text="Bahoriy lolalar">
+                <img src="rasim 2.jpg">
+                <h3>Lola</h3>
+            </div>
+            <div class="card open-modal" data-text="Nafis orxideya">
+                <img src="rasim 3.jpg">
+                <h3>Orxideya</h3>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="contact-section">
+        <h2>Aloqa</h2>
+        <div class="contact-box">
+            <div>
+                <p>📍 Urganch shahri</p>
+                <p>📞 +998 95 780 06 08</p>
+                <p>📧 gulzor@gmail.com</p>
+            </div>
+
+            <form id="contactForm">
+                <input type="text" id="contactName" placeholder="Ismingiz" required>
+                <input type="email" id="contactEmail" placeholder="Email" required>
+                <textarea id="contactMessage" placeholder="Xabar"></textarea>
+                <button type="submit">Yuborish</button>
+            </form>
+        </div>
+        <p id="contactResult"></p>
+    </section>
+
+    <div id="pageModal" class="modal">
+        <div class="modal-content big-modal">
+            <span class="close">&times;</span>
+            <h2 id="modalTitle"></h2>
+            <img id="modalImg">
+            <p id="modalText"></p>
+        </div>
+    </div>
+
+
+    <footer>
+        <p>&copy; 2025 Gulzor Gullar Do‘koni</p>
+    </footer>
+
+</body>
+
+</html>
